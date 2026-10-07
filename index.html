@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MBM Plumbing &amp; Heating | Commercial &amp; Domestic Plumbing and Heating in Manchester</title>
+<meta name="description" content="MBM Plumbing & Heating — commercial & domestic plumbing and heating across Manchester. Central heating, bathrooms, underfloor heating, cylinders and repairs. Call 0161 955 4446.">
+<link rel="stylesheet" href="fonts/fonts-extra.css">
+<style>
+:root{
+  --bg:#141A22; --bg2:#17202B; --card:#1C2531; --card2:#212C3B;
+  --aqua:#00D4FF; --aqua-dim:rgba(0,212,255,.12);
+  --ink:#FFFFFF; --muted:#9AA7B4; --line:rgba(0,212,255,.16);
+  --font-d:'Sora',sans-serif; --font-l:'Chakra Petch',sans-serif; --font-b:'Public Sans',sans-serif;
+  --r:28px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-b);line-height:1.65;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 28px}
+.kicker{font-family:var(--font-l);font-weight:600;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--aqua)}
+h1,h2,h3{font-family:var(--font-d);font-weight:800;line-height:1.1;letter-spacing:-.5px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-l);font-weight:600;font-size:14px;letter-spacing:2px;text-transform:uppercase;padding:17px 34px;border-radius:60px;transition:.25s;cursor:pointer;border:2px solid transparent}
+.btn-aqua{background:linear-gradient(120deg,#00D4FF,#3AE3FF);color:#06222B}
+.btn-aqua:hover{box-shadow:0 10px 34px rgba(0,212,255,.45);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--aqua);color:var(--aqua)}
+section{padding:104px 0;position:relative}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+/* ---------- header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(20,26,34,.8);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 0}
+.logo{font-family:var(--font-d);font-weight:800;font-size:24px}
+.logo span{color:var(--aqua)}
+.logo small{display:block;font-family:var(--font-l);font-weight:500;font-size:10px;letter-spacing:3px;color:var(--muted)}
+.nav-links{display:flex;gap:30px;font-family:var(--font-l);font-weight:500;font-size:13px;letter-spacing:2px;text-transform:uppercase}
+.nav-links a{color:var(--muted);transition:.2s}
+.nav-links a:hover{color:var(--aqua)}
+.nav-phone{font-family:var(--font-l);font-weight:600;font-size:14px;background:var(--aqua-dim);border:1px solid var(--line);color:var(--aqua);padding:11px 22px;border-radius:60px;transition:.2s}
+.nav-phone:hover{background:var(--aqua);color:#06222B}
+/* ---------- hero ---------- */
+.hero{min-height:100vh;display:flex;align-items:center;padding:160px 0 80px;text-align:center;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:900px;height:500px;background:radial-gradient(ellipse,rgba(0,212,255,.14),transparent 65%);pointer-events:none}
+.hero-inner{position:relative;z-index:2}
+.pill{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-l);font-weight:600;font-size:12px;letter-spacing:3px;text-transform:uppercase;background:var(--aqua-dim);border:1px solid var(--line);color:var(--aqua);border-radius:60px;padding:10px 22px;margin-bottom:26px}
+.pill::before{content:"●";animation:blink 1.8s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+.hero h1{font-size:clamp(46px,6.5vw,92px);max-width:900px;margin:0 auto}
+.hero h1 .grad{background:linear-gradient(100deg,#00D4FF,#7CF0FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lede{font-size:18px;color:var(--muted);max-width:620px;margin:24px auto 36px}
+.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+/* collage */
+.collage{position:relative;max-width:980px;margin:70px auto 0;height:480px}
+.c-main{position:absolute;left:50%;top:0;transform:translateX(-62%);width:400px;height:470px;object-fit:cover;border-radius:200px 200px var(--r) var(--r);border:3px solid rgba(0,212,255,.35);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.c-blob{position:absolute;left:50%;top:60px;transform:translateX(12%);width:330px;height:330px;object-fit:cover;border-radius:42% 58% 61% 39%/45% 42% 58% 55%;border:3px solid rgba(0,212,255,.25)}
+.c-small{position:absolute;left:50%;top:300px;transform:translateX(-125%);width:230px;height:170px;object-fit:cover;border-radius:22px;border:3px solid rgba(255,255,255,.14);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.badge-float{position:absolute;font-family:var(--font-l);font-weight:600;font-size:13px;letter-spacing:1px;background:rgba(28,37,49,.92);border:1px solid var(--line);border-radius:16px;padding:14px 20px;display:flex;align-items:center;gap:10px;box-shadow:0 0 30px rgba(0,212,255,.25);backdrop-filter:blur(8px);z-index:3}
+.badge-float .t{color:var(--aqua);font-size:18px}
+.b1{left:50%;top:40px;transform:translateX(-128%)}
+.b2{left:50%;top:210px;transform:translateX(38%)}
+/* ---------- marquee ---------- */
+.marquee{background:linear-gradient(90deg,rgba(0,212,255,.12),rgba(0,212,255,.04));border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:18px 0}
+.mq-track{display:flex;white-space:nowrap;animation:tick 30s linear infinite;font-family:var(--font-l);font-weight:600;font-size:14px;letter-spacing:3px;text-transform:uppercase;color:var(--aqua)}
+.mq-track span{padding:0 30px}
+@keyframes tick{to{transform:translateX(-50%)}}
+/* ---------- services cards ---------- */
+.sec-head{text-align:center;max-width:720px;margin:0 auto 56px}
+.sec-head h2{font-size:clamp(38px,4.6vw,60px);margin:16px 0}
+.sec-head h2 span{color:var(--aqua)}
+.sec-head p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:var(--r);overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-8px);border-color:var(--aqua);box-shadow:0 26px 60px rgba(0,0,0,.45),0 0 40px rgba(0,212,255,.12)}
+.card .ph{height:210px;overflow:hidden;position:relative}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.card:hover .ph img{transform:scale(1.07)}
+.card .tag{position:absolute;top:16px;left:16px;font-family:var(--font-l);font-weight:600;font-size:11px;letter-spacing:2px;text-transform:uppercase;background:rgba(6,34,43,.85);color:var(--aqua);border:1px solid var(--line);padding:7px 14px;border-radius:40px}
+.card .bd{padding:30px 28px 32px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:23px}
+.card p{color:var(--muted);font-size:15px;flex:1}
+.card a{font-family:var(--font-l);font-weight:600;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--aqua)}
+.card a:hover{text-decoration:underline}
+/* ---------- how it works ---------- */
+.how{background:var(--bg2);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:10px}
+.step{background:var(--card);border-radius:var(--r);padding:44px 34px;text-align:center;border:1px solid rgba(255,255,255,.07);position:relative;transition:.3s}
+.step:hover{border-color:var(--line)}
+.step .n{width:72px;height:72px;margin:0 auto 22px;border-radius:50%;background:linear-gradient(135deg,#00D4FF,#0090FF);display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-weight:800;font-size:30px;color:#06222B;box-shadow:0 0 34px rgba(0,212,255,.4)}
+.step h3{font-size:22px;margin-bottom:10px}
+.step p{color:var(--muted);font-size:15px}
+.step:not(:last-child)::after{content:"→";position:absolute;right:-24px;top:44%;font-size:26px;color:var(--aqua);z-index:2}
+/* ---------- stats ---------- */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat b{font-family:var(--font-d);font-weight:800;font-size:62px;background:linear-gradient(120deg,#00D4FF,#9FF3FF);-webkit-background-clip:text;background-clip:text;color:transparent;display:block}
+.stat span{font-family:var(--font-l);font-weight:500;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
+/* ---------- guarantee band ---------- */
+.guar{background:linear-gradient(135deg,#0E2A38,#141A22);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.guar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.g-item{display:flex;gap:18px;align-items:flex-start;background:rgba(0,212,255,.05);border:1px solid var(--line);border-radius:20px;padding:30px 28px}
+.g-item .t{font-size:24px;color:var(--aqua);flex-shrink:0}
+.g-item h3{font-size:19px;margin-bottom:6px}
+.g-item p{color:var(--muted);font-size:14.5px}
+/* ---------- testimonials ---------- */
+.t-head{text-align:center;margin-bottom:44px}
+.t-head h2{font-size:clamp(38px,4.6vw,60px);margin:16px 0}
+.t-row{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.t-card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:var(--r);padding:36px 32px;display:flex;flex-direction:column;gap:16px;transition:.3s}
+.t-card:hover{transform:translateY(-6px);border-color:var(--line)}
+.t-card .stars{color:var(--aqua);font-size:18px;letter-spacing:4px}
+.t-card p{font-size:16px;color:#D7DEE6;flex:1}
+.t-card .who{display:flex;align-items:center;gap:14px}
+.t-card .av{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#00D4FF,#0090FF);display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-weight:800;font-size:20px;color:#06222B}
+.t-card .who b{display:block;font-size:15px}
+.t-card .who small{color:var(--muted);font-size:13px}
+/* ---------- areas ---------- */
+.areas{text-align:center;background:var(--bg2);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.area-chips{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:36px}
+.area-chips span{font-family:var(--font-l);font-weight:500;font-size:14px;letter-spacing:1px;background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:40px;padding:13px 28px;color:var(--muted);transition:.2s}
+.area-chips span:hover{border-color:var(--aqua);color:var(--aqua)}
+/* ---------- CTA ---------- */
+.cta-card{background:linear-gradient(120deg,#06303F,#0A4A63 60%,#06222B);border:1px solid var(--line);border-radius:36px;padding:80px 40px;text-align:center;position:relative;overflow:hidden}
+.cta-card::before{content:"";position:absolute;top:-120px;right:-120px;width:340px;height:340px;background:radial-gradient(circle,rgba(0,212,255,.3),transparent 70%)}
+.cta-card h2{font-size:clamp(40px,5.5vw,68px);margin-bottom:14px}
+.cta-card h2 span{color:var(--aqua)}
+.cta-card p{color:#C4D2DD;max-width:560px;margin:0 auto 30px}
+.phone-big{display:inline-block;font-family:var(--font-d);font-weight:800;font-size:clamp(38px,5vw,64px);letter-spacing:1px;color:#fff;margin-bottom:30px;text-shadow:0 0 40px rgba(0,212,255,.5)}
+/* ---------- contact ---------- */
+.contact-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:start}
+.c-info h2{font-size:clamp(38px,4.6vw,58px);margin:16px 0}
+.c-info>p{color:var(--muted)}
+.c-cards{display:grid;gap:16px;margin-top:30px}
+.c-card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:22px 26px;display:flex;gap:18px;align-items:center;transition:.2s}
+.c-card:hover{border-color:var(--aqua)}
+.c-card .ic{width:52px;height:52px;border-radius:16px;background:var(--aqua-dim);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--aqua);flex-shrink:0}
+.c-card small{display:block;font-family:var(--font-l);font-weight:500;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
+.c-card a{font-weight:600;font-size:18px}
+.c-card a:hover{color:var(--aqua)}
+form{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--r);padding:42px;display:grid;gap:18px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+label{font-family:var(--font-l);font-weight:500;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);display:grid;gap:8px}
+input,select,textarea{background:#141C26;border:1px solid rgba(255,255,255,.1);border-radius:14px;color:#fff;font-family:var(--font-b);font-size:15px;padding:15px 18px;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--aqua);box-shadow:0 0 0 3px rgba(0,212,255,.15)}
+textarea{min-height:120px;resize:vertical}
+select option{background:#141C26}
+/* ---------- footer ---------- */
+footer{border-top:1px solid rgba(255,255,255,.07);padding:46px 0;background:#10151C}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap;font-family:var(--font-l);font-weight:500;font-size:12px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
+.badge{border:1px solid var(--aqua);color:var(--aqua);border-radius:40px;padding:11px 24px;font-size:11px;letter-spacing:3px;transition:.25s;display:inline-block}
+.badge:hover{background:var(--aqua);color:#06222B}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .cards,.steps,.t-row,.guar-grid,.contact-grid{grid-template-columns:1fr 1fr}
+  .step:not(:last-child)::after{display:none}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .collage{height:400px}
+  .c-main{width:300px;height:380px;transform:translateX(-58%)}
+  .c-blob{width:240px;height:240px;transform:translateX(18%)}
+  .c-small{display:none}
+  .b1{transform:translateX(-118%)}.b2{transform:translateX(30%)}
+  section{padding:72px 0}
+  .hero{padding:140px 0 60px}
+}
+@media(max-width:560px){
+  .cards,.steps,.t-row,.guar-grid,.contact-grid,.f-row,.stats-grid{grid-template-columns:1fr}
+  .collage{height:340px}
+  .c-main{width:230px;height:300px;transform:translateX(-70%)}
+  .c-blob{width:170px;height:170px;top:40px;transform:translateX(-6%)}
+  .b1{top:10px;transform:translateX(-96%)}
+  .b2{top:150px;transform:translateX(6%)}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo">MBM <span>Plumbing</span> &amp; Heating<small>MANCHESTER · DOMESTIC &amp; COMMERCIAL</small></a>
+    <nav class="nav-links">
+      <a href="#services">Services</a><a href="#how">How It Works</a><a href="#reviews">Reviews</a><a href="#areas">Areas</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-phone" href="tel:01619554446">0161 955 4446</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="rv in">
+      <span class="pill">Now booking across Greater Manchester</span>
+      <h1>Manchester's <span class="grad">friendly</span> plumbing &amp; heating team</h1>
+      <p class="lede">Boilers, bathrooms and breakdowns — sorted by qualified engineers who explain everything in plain English and leave your home spotless.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-aqua" href="tel:01619554446">Call 0161 955 4446</a>
+        <a class="btn btn-ghost" href="#contact">Get a Free Quote →</a>
+      </div>
+    </div>
+    <div class="collage rv in">
+      <img class="c-main" src="img/pipe-2.jpg" alt="MBM heating engineers at work">
+      <img class="c-blob" src="img/bath-shower.jpg" alt="Bathroom installation by MBM">
+      <img class="c-small" src="img/pipe-0.jpg" alt="Commercial pipework installation">
+      <div class="badge-float b1"><span class="t">✓</span> Gas Safe Registered</div>
+      <div class="badge-float b2"><span class="t">●</span> 24/7 Call-out</div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee"><div class="mq-track">
+  <span>Boiler Installation ✦</span><span>Bathroom Fitting ✦</span><span>Underfloor Heating ✦</span><span>Hot Water Cylinders ✦</span><span>Commercial Plumbing ✦</span><span>Repairs &amp; Maintenance ✦</span>
+  <span>Boiler Installation ✦</span><span>Bathroom Fitting ✦</span><span>Underfloor Heating ✦</span><span>Hot Water Cylinders ✦</span><span>Commercial Plumbing ✦</span><span>Repairs &amp; Maintenance ✦</span>
+</div></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="kicker">What we do</p>
+      <h2>Every job, <span>done properly</span></h2>
+      <p>From a dripping tap to a full commercial fit-out — one friendly team, fixed pricing, and workmanship we're proud to sign off.</p>
+    </div>
+    <div class="cards rv">
+      <div class="card">
+        <div class="ph"><img src="img/pipe-0.jpg" alt="Central heating pipework"><span class="tag">Most popular</span></div>
+        <div class="bd"><h3>Central Heating</h3><p>Boiler installation, servicing and repairs — efficient systems fitted right.</p><a href="#contact">Get a quote →</a></div>
+      </div>
+      <div class="card">
+        <div class="ph"><img src="img/bath-shower.jpg" alt="New bathroom installation"><span class="tag">Design to finish</span></div>
+        <div class="bd"><h3>Bathroom Installation</h3><p>Complete bathroom design and fitting, from suites to tiling.</p><a href="#contact">Get a quote →</a></div>
+      </div>
+      <div class="card">
+        <div class="ph"><img src="img/bath-modern.jpg" alt="Modern bathroom with underfloor heating"><span class="tag">Energy smart</span></div>
+        <div class="bd"><h3>Underfloor Heating</h3><p>Modern underfloor heating designed and installed for even warmth.</p><a href="#contact">Get a quote →</a></div>
+      </div>
+      <div class="card">
+        <div class="ph"><img src="img/pipe-1.jpg" alt="Hot water cylinder fittings"><span class="tag">Fast install</span></div>
+        <div class="bd"><h3>Hot Water Cylinders</h3><p>Cylinder replacement and upgrades for reliable hot water.</p><a href="#contact">Get a quote →</a></div>
+      </div>
+      <div class="card">
+        <div class="ph"><img src="img/pipe-2.jpg" alt="Commercial plumbing engineers"><span class="tag">Business</span></div>
+        <div class="bd"><h3>Commercial Plumbing</h3><p>Plumbing for offices, schools and healthcare — minimal disruption.</p><a href="#contact">Get a quote →</a></div>
+      </div>
+      <div class="card">
+        <div class="ph"><img src="img/bath-white.jpg" alt="Plumbing repairs and maintenance"><span class="tag">Same-day</span></div>
+        <div class="bd"><h3>Repairs &amp; Maintenance</h3><p>Fast diagnosis and lasting fixes for leaks, blockages and breakdowns.</p><a href="#contact">Get a quote →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="how">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="kicker">How it works</p>
+      <h2>Sorted in <span>three easy steps</span></h2>
+    </div>
+    <div class="steps rv">
+      <div class="step"><div class="n">1</div><h3>Get in touch</h3><p>Call, message or use the form — tell us what's wrong or what you're planning.</p></div>
+      <div class="step"><div class="n">2</div><h3>Free, fixed quote</h3><p>We visit, assess and give you a clear written price. No obligation, no jargon.</p></div>
+      <div class="step"><div class="n">3</div><h3>We get it done</h3><p>Our engineers arrive on time, do the job neatly and clean up after themselves.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stats-grid rv">
+    <div class="stat"><b>15+</b><span>Years' experience</span></div>
+    <div class="stat"><b>3,100+</b><span>Happy customers</span></div>
+    <div class="stat"><b>4.9★</b><span>Average rating</span></div>
+    <div class="stat"><b>60<span style="font-size:.6em">min</span></b><span>Emergency response</span></div>
+  </div>
+</section>
+
+<section class="guar" style="padding:80px 0">
+  <div class="wrap">
+    <div class="sec-head rv" style="margin-bottom:44px">
+      <p class="kicker">The MBM promise</p>
+      <h2 style="font-size:clamp(34px,4vw,52px)">Why Manchester <span style="color:var(--aqua)">keeps calling us back</span></h2>
+    </div>
+    <div class="guar-grid rv">
+      <div class="g-item"><span class="t">✓</span><div><h3>Fixed prices, always</h3><p>The quote is the price. If we find extra work, we agree it with you first.</p></div></div>
+      <div class="g-item"><span class="t">✓</span><div><h3>Qualified &amp; insured</h3><p>Gas Safe registered engineers with full public liability cover.</p></div></div>
+      <div class="g-item"><span class="t">✓</span><div><h3>5-year guarantee</h3><p>All boiler and bathroom installations backed for five years.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="t-head rv">
+      <p class="kicker">Customer reviews</p>
+      <h2>Loved across <span style="color:var(--aqua)">Greater Manchester</span></h2>
+    </div>
+    <div class="t-row rv">
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p>"New boiler fitted in a day. They explained every option, didn't push the expensive one, and the house is toasty."</p>
+        <div class="who"><span class="av">D</span><div><b>Dan R.</b><small>Salford — Boiler install</small></div></div>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p>"Our bathroom went from dated to dream. Tidy, punctual and the tiling is genuinely perfect."</p>
+        <div class="who"><span class="av">A</span><div><b>Amara O.</b><small>Stockport — Bathroom fit</small></div></div>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p>"They look after our school's plumbing. Quick, reliable and brilliant with the staff — highly recommended."</p>
+        <div class="who"><span class="av">M</span><div><b>Mark T.</b><small>Oldham — Commercial client</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="areas" class="areas">
+  <div class="wrap rv">
+    <p class="kicker">Service areas</p>
+    <h2 style="font-size:clamp(38px,4.6vw,60px);margin:16px 0">Covering <span style="color:var(--aqua)">Greater Manchester</span></h2>
+    <p style="color:var(--muted)">Same-day slots available across all these areas.</p>
+    <div class="area-chips">
+      <span>Manchester</span><span>Salford</span><span>Stockport</span><span>Oldham</span><span>Bury</span><span>Rochdale</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-card rv">
+      <p class="kicker" style="color:#9FE3F5">Need us today?</p>
+      <h2>One call <span>sorts it.</span></h2>
+      <div><a class="phone-big" href="tel:01619554446">0161 955 4446</a></div>
+      <p>24-hour emergency call-out for leaks, breakdowns and boiler failures — or message us for a free, no-obligation quote.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2">
+        <a class="btn btn-aqua" href="tel:01619554446">Call Now</a>
+        <a class="btn btn-ghost" href="#contact" style="border-color:rgba(255,255,255,.3);color:#fff">Request a Quote →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:40px">
+  <div class="wrap contact-grid">
+    <div class="c-info rv">
+      <p class="kicker">Get in touch</p>
+      <h2>Let's talk about <span style="color:var(--aqua)">your project</span></h2>
+      <p>Call, email or send the form — we'll get back to you the same working day.</p>
+      <div class="c-cards">
+        <div class="c-card"><span class="ic">●</span><div><small>Call us</small><a href="tel:01619554446">0161 955 4446</a></div></div>
+        <div class="c-card"><span class="ic">✦</span><div><small>Email us</small><a href="mailto:info@mbmservices.uk">info@mbmservices.uk</a></div></div>
+        <div class="c-card"><span class="ic">◆</span><div><small>Areas</small><span style="font-size:15px;color:var(--muted)">Manchester · Salford · Stockport · Oldham · Bury · Rochdale</span></div></div>
+      </div>
+    </div>
+    <form class="rv" onsubmit="return false">
+      <div class="f-row">
+        <label>Your name<input type="text" name="name" placeholder="Full name" required></label>
+        <label>Phone<input type="tel" name="phone" placeholder="Best number" required></label>
+      </div>
+      <label>Email<input type="email" name="email" placeholder="you@example.co.uk"></label>
+      <label>What do you need?
+        <select name="service">
+          <option>Central Heating</option><option>Bathroom Installation</option>
+          <option>Underfloor Heating</option><option>Hot Water Cylinders</option>
+          <option>Commercial Plumbing</option><option>Repairs &amp; Maintenance</option>
+        </select>
+      </label>
+      <label>Tell us more<textarea name="message" placeholder="What's going on? Any deadlines we should know about?"></textarea></label>
+      <button class="btn btn-aqua" type="submit" style="justify-content:center">Send My Enquiry →</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 MBM Plumbing &amp; Heating — Manchester</span>
+    <a class="badge" href="https://altuswebsolutions.com" target="_blank" rel="noopener">✦ Concept by Altus Web Solutions ✦</a>
+    <span>0161 955 4446 · info@mbmservices.uk</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
